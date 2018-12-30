@@ -1,25 +1,55 @@
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default"
+remote_theme             : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site Settings
+locale                   : "en-US"
+title                    : "Trond"
+title_separator          : "-"
+name                     : "Trond Hindenes"
+description              : "An amazing website."
+url                      : "https://www.hindenes.com"
+baseurl                  : # the subpath of your site, e.g. "/blog"
+repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+words_per_minute         : 200
+
+# Social Sharing
+twitter:
+  username               : "trondhindenes"
+
+# Site Author
+author:
+  name             : "Trond Hindenes"
+  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "I am an amazing person."
+  location         : "Somewhere"
+# Plugins (previously gems:)
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
   - jekyll-feed
-  - jekyll-remote-theme
+  - jemoji
   - jekyll-include-cache
 
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
 
-title: Trond Hindenes
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.hindenes.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter:
-  username: trondhindenes
-
-author:
-  name: "Trond Hindenes"
-
-# Build settings
-markdown: kramdown
-
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
